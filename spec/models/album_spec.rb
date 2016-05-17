@@ -11,4 +11,9 @@ RSpec.describe Album do
     subject.title = 'a' * 101
     expect(subject).not_to be_valid
   end
+
+  it "is valid with proper data" do
+    subject.title = 'a' * 50 
+    expect(subject).to be_valid
+  end
 end
